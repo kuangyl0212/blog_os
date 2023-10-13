@@ -24,6 +24,14 @@ fn panic(_info: &PanicInfo) -> ! {
 pub extern "C" fn _start() -> ! {
     println!("Hello World{}", "!");
 
+    blog_os::init();
+
+    // fn stack_overflow() {
+    //     stack_overflow();
+    // }
+
+    // stack_overflow();
+
     #[cfg(test)]
     test_main();
 
